@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demostración de box-sizing</title>
+  <style>
+    .contenedor {
+      display: flex;
+      gap: 20px;
+      margin-top: 50px;
+      justify-content: center;
+    }
+
+    .caja {
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      border: 5px solid #55c57a;
+      background-color: #7ed56f;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .sin-border-box {
+      box-sizing: content-box;
+    }
+
+    .con-border-box {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Demostración de <code>box-sizing</code></h1>
+
+  <div class="contenedor">
+    <div class="caja sin-border-box">
+      Sin <br> border-box
+    </div>
+
+    <div class="caja con-border-box">
+      Con <br> border-box
+    </div>
+  </div>
+
+</body>
+</html>
